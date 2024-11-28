@@ -6,9 +6,9 @@ export default function ListaClientes(props) {
 
     // Utilizando React Hooks para gerenciar estado
     const [clientes, setClientes] = React.useState([
-        { nome: "João Silva", nomeSocial: "Joãozinho", cpf: "123.456.789-00", email: "joao@gmail.com", telefone: "(11) 98765-4321" },
-        { nome: "Maria Santos", cpf: "987.654.321-00", email: "maria@hotmail.com", telefone: "(21) 91234-5678" },
-        { nome: "Carlos Souza", nomeSocial: "Carlão", cpf: "456.123.789-00", email: "carlos@yahoo.com", telefone: "(31) 99876-5432" },
+        { nome: "João Silva", nomeSocial: "Joãozinho", cpf: "123.456.789-00",rg: "25.678.123-4", email: "joao@gmail.com", telefone: "(11) 98765-4321" },
+        { nome: "Maria Santos", cpf: "987.654.321-00", rg: "25.678.321-9", email: "maria@hotmail.com", telefone: "(21) 91234-5678" },
+        { nome: "Carlos Souza", nomeSocial: "Carlão", cpf: "456.123.789-00", rg: "25.678.354-8", email: "carlos@yahoo.com", telefone: "(31) 99876-5432" },
     ]);
 
     const [clienteSelecionado, setClienteSelecionado] = React.useState(null);
@@ -95,6 +95,9 @@ export default function ListaClientes(props) {
                                 )}
                                 <p>
                                     <strong>CPF:</strong> {cliente.cpf}
+                                </p>
+                                <p>
+                                    <strong>RG:</strong> {cliente.rg}
                                 </p>
                                 <p>
                                     <strong>E-mail:</strong> {cliente.email}
